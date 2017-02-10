@@ -1,0 +1,24 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to Java\n\n\nHere you will learn the basics of python.\n\n\nFAQs\n\n\n\n\nWhere do I run the code?\n\n\nYou can either \ninstall BluJ\n (Windows, Mac, and Linux), or you can \nrun online\n\n\n\n\n\n\nWhat if I need help?\n\n\nWe're only an \nemail away\n\n\n\n\n\n\nWhat if I'm not a part of SD Code?\n\n\nDon't worry about it! This resource is free to use by anyone!\n\n\n\n\n\n\nCan I host this on my website?\n\n\nSure, as long as you give credit and link it to our website\n\n\n\n\n\n\nHow can I contribute?\n\n\nSubmit a pull request to the repository on \nGithub\n\n\n\n\n\n\n\n\nCreators\n\n\n\n\nNir Levin\n\n\nRonak Shah", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#welcome-to-java", 
+            "text": "Here you will learn the basics of python.", 
+            "title": "Welcome to Java"
+        }, 
+        {
+            "location": "/#faqs", 
+            "text": "Where do I run the code?  You can either  install BluJ  (Windows, Mac, and Linux), or you can  run online    What if I need help?  We're only an  email away    What if I'm not a part of SD Code?  Don't worry about it! This resource is free to use by anyone!    Can I host this on my website?  Sure, as long as you give credit and link it to our website    How can I contribute?  Submit a pull request to the repository on  Github", 
+            "title": "FAQs"
+        }, 
+        {
+            "location": "/#creators", 
+            "text": "Nir Levin  Ronak Shah", 
+            "title": "Creators"
+        }
+    ]
+}
