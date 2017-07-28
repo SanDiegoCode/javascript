@@ -1,11 +1,12 @@
 # Project information
-site_name: 'Java'
-site_description: 'Learn Java Online'
+site_name: 'Javascript'
+site_description: 'Learn Javascript Online'
 site_author: 'San Diego Code'
-site_url: 'https://sdcoding.com/java'
+site_url: 'https://sdcoding.com/javascript'
 
 pages:
 - Home: index.md
+- Drawing App Project: HTML5DrawingApp.md
 # Uncomment the below line to add lessons
 #- Lesson 1: lesson1.md
 
@@ -13,7 +14,7 @@ pages:
 
 # Repository
 repo_name: 'GitHub'
-repo_url: 'https://github.com/sandiegocode/java/'
+repo_url: 'https://github.com/sandiegocode/javascript/'
 
 # Copyright
 copyright: © San Diego Code
@@ -41,5 +42,5 @@ markdown_extensions:
   - admonition
 
 #Compiler Code
-extra_css: [compiler.css]
-extra_javascript: [compiler.js]
+#extra_css: [compiler.css]
+#extra_javascript: [compiler.js]
