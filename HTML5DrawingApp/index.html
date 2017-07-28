@@ -377,9 +377,10 @@
                 
                 <h1 id="drawing-app-with-html5-canvas-and-javascript">Drawing App with HTML5 Canvas and Javascript</h1>
 <p>Prerequisites: a brain and some basic knowledge of HTML and Javascript.</p>
-<p>End Product: a semi-functional, semi-user-friendly, super-cool web app that allows you to draw with your mouse and change the color/size/type of drawing tool.</p>
+<p><a href="https://codepen.io/ronakshah/full/rzOgaQ/">End Product</a>: a semi-functional, semi-user-friendly, super-cool web app that allows you to draw with your mouse and change the color/size/type of drawing tool.</p>
 <h4 id="project-setup">Project Setup</h4>
-<p>You will need a text editor (I recommend Atom.io or Textwrangler), but even Notepad will do. Setup a folder that will contain all of the files for this project, and name it something like JavascriptDrawingApp (or don't, name it dankmemes if you want). And thats it! Open up your text editor and if you are using a more advanced text editor you can open up the path for your project foldner and advance to the next step (don't worry if you can't, you will probably just need to leave the folder open in your system's file tree, i.e. Finder for Mac, so you can quickly access files inside of it.)</p>
+<p>You will need a text editor (I recommend <a href="https://atom.io/">Atom.io</a> or <a href="https://www.barebones.com/products/textwrangler/">Textwrangler</a>), but even Notepad will do. Setup a folder that will contain all of the files for this project, and name it something like <code>JavascriptDrawingApp</code> (or don't, name it dankmemes if you want). And thats it! Open up your text editor and if you are using a more advanced text editor you can open up the path for your project foldner and advance to the next step (don't worry if you can't, you will probably just need to leave the folder open in your system's file tree, i.e. Finder for Mac, so you can quickly access files inside of it.)</p>
+<p>If you're on the web, you can use <a href="https://codepen.io/project">Codepen Projects</a></p>
 <h3 id="step-1">Step 1</h3>
 <p>Create your <code>index.html</code> file and add the following: </p>
 <pre><code>&lt;!DOCTYPE html&gt; 
@@ -644,6 +645,22 @@ function keyDownEvent(event) {
 }
 </code></pre>
               
+              
+                <h2>Comments</h2>
+                <div id="disqus_thread"></div>
+                <script>
+                  var disqus_config = function () {
+                    this.page.url = "https://sdcoding.com/javascript/HTML5DrawingApp/";
+                    this.page.identifier =
+                      "/HTML5DrawingApp/";
+                  };
+                  (function() {
+                    var d = document, s = d.createElement("script");
+                    s.src = "//sandiegocode.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                  })();
+                </script>
               
             </article>
           </div>
