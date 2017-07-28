@@ -2,7 +2,7 @@
 
 Prerequisites: a brain and some basic knowledge of HTML and Javascript.
 
-End Product: a semi-functional, semi-user-friendly, super-cool web app that allows you to draw with your mouse and change the color/size/type of drawing tool.
+[End Product](https://codepen.io/ronakshah/full/rzOgaQ/): a semi-functional, semi-user-friendly, super-cool web app that allows you to draw with your mouse and change the color/size/type of drawing tool.
 
 #### Project Setup
 You will need a text editor (I recommend Atom.io or Textwrangler), but even Notepad will do. Setup a folder that will contain all of the files for this project, and name it something like JavascriptDrawingApp (or don't, name it dankmemes if you want). And thats it! Open up your text editor and if you are using a more advanced text editor you can open up the path for your project foldner and advance to the next step (don't worry if you can't, you will probably just need to leave the folder open in your system's file tree, i.e. Finder for Mac, so you can quickly access files inside of it.)
