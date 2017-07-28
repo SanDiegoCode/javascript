@@ -1,0 +1,708 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn Javascript Online">
+      
+      
+        <link rel="canonical" href="https://sdcoding.com/javascript/HTML5DrawingApp/">
+      
+      
+        <meta name="author" content="San Diego Code">
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.2.0">
+    
+    
+      
+        <title>Drawing App Project - Javascript</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-e17eeafcbc.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-892b79c5c5.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="red" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href=".." title="Javascript" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Drawing App Project
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/sandiegocode/javascript/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Javascript
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/sandiegocode/javascript/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Drawing App Project
+      </label>
+    
+    <a href="./" title="Drawing App Project" class="md-nav__link md-nav__link--active">
+      Drawing App Project
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-setup" title="Project Setup" class="md-nav__link">
+    Project Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1" title="Step 1" class="md-nav__link">
+    Step 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2" title="Step 2" class="md-nav__link">
+    Step 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3" title="Step 3" class="md-nav__link">
+    Step 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4" title="Step 4" class="md-nav__link">
+    Step 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5" title="Step 5" class="md-nav__link">
+    Step 5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6" title="Step 6" class="md-nav__link">
+    Step 6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7" title="Step 7" class="md-nav__link">
+    Step 7
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-setup" title="Project Setup" class="md-nav__link">
+    Project Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1" title="Step 1" class="md-nav__link">
+    Step 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2" title="Step 2" class="md-nav__link">
+    Step 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3" title="Step 3" class="md-nav__link">
+    Step 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4" title="Step 4" class="md-nav__link">
+    Step 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5" title="Step 5" class="md-nav__link">
+    Step 5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6" title="Step 6" class="md-nav__link">
+    Step 6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7" title="Step 7" class="md-nav__link">
+    Step 7
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+                 <a href="https://github.com/sandiegocode/javascript/edit/master/docs/HTML5DrawingApp.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+               
+              
+                
+                <h1 id="drawing-app-with-html5-canvas-and-javascript">Drawing App with HTML5 Canvas and Javascript</h1>
+<p>Prerequisites: a brain and some basic knowledge of HTML and Javascript.</p>
+<p>End Product: a semi-functional, semi-user-friendly, super-cool web app that allows you to draw with your mouse and change the color/size/type of drawing tool.</p>
+<h4 id="project-setup">Project Setup</h4>
+<p>You will need a text editor (I recommend Atom.io or Textwrangler), but even Notepad will do. Setup a folder that will contain all of the files for this project, and name it something like JavascriptDrawingApp (or don't, name it dankmemes if you want). And thats it! Open up your text editor and if you are using a more advanced text editor you can open up the path for your project foldner and advance to the next step (don't worry if you can't, you will probably just need to leave the folder open in your system's file tree, i.e. Finder for Mac, so you can quickly access files inside of it.)</p>
+<h3 id="step-1">Step 1</h3>
+<p>Create your <code>index.html</code> file and add the following: </p>
+<pre><code>&lt;!DOCTYPE html&gt; 
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt; My cool drawing app &lt;/title&gt;
+        &lt;style&gt;
+            html, body {
+                margin: 0px;
+                padding: 0px;
+                overflow-x: hidden;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;canvas id="paper"&gt;&lt;/canvas&gt;
+        &lt;script src="main.js"&gt;&lt;/canvas&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>This is just setting up a basic HTML file that has the small amount of CSS we need in a <code>&lt;style&gt;</code> tag. All the CSS is doing is making sure that our canvas will be able to take up the entire browser screen by eliminating any extra space. Then in our <code>&lt;body&gt;</code> we have our <code>&lt;canvas id="paper"&gt;&lt;/canvas&gt;</code> that we will use in our Javascript to draw to, and then our <code>&lt;script&gt;</code> tag requesting the Javascript resource, <code>main.js</code> that we will create next.</p>
+<h3 id="step-2">Step 2</h3>
+<p>In the same folder as your <code>index.html</code> file, create a <code>main.js</code> file and enter the following:</p>
+<pre><code>var canvas = document.getElementById("paper"),
+    ctx = canvas.getContext("2d"),
+    width = canvas.width = window.innerWidth,
+    height = canvas.height = window.innerHeight;
+</code></pre>
+<p>This Javascript code is initializing a couple of variables, the first being <code>canvas</code>, which is initialized to a DOM (Document Object Model) function <code>document.getElementById(id)</code> that returns the HTML element with the corresponding id in our index.html file (in this case, our <code>&lt;canvas id="paper"&gt;&lt;/canvas&gt;</code> element. After this assignment we move onto our context variable, <code>ctx</code>, which calls the function <code>getContext("2d")</code> on our recently created <code>canvas</code> variable in order to return an object that we can use to draw onto our <code>canvas</code> with. Finally, the variables <code>width</code> and <code>height</code> are initiated and in a chain of assignment operatiosn are first set to the corresponding <code>canvas</code> property, which in turn is assigned the value of <code>window.innerWidth</code> or <code>window.innerHeight</code> which is a Javascript engine model property that returns the full width and height of our browser screen in pixels, respectively. (NOTE: although the values of <code>window.innerWidth</code> and <code>window.innerHeight</code> are representative of pixels, their actual values are just numbers, i.e, <code>600</code> or <code>920.60</code>).</p>
+<h3 id="step-3">Step 3</h3>
+<p>Now it is time to add some event listeners! What are those? Well, the browser is waiting for you to interact with the computer (like its listening for something), and then when you do something, like press a key or move your mouse, it triggers what is called an <code>event</code> which allows us as programmers to use that event data. We can add different kinds of <code>listeners</code> to our HTML elements that perform different functions when different events are "fired" (which just means they happend, like a click).</p>
+<p>In our <code>main.js</code> file lets add some event listeners: </p>
+<pre><code>canvas.addEventListener("mousedown", mouseDownEvent);
+canvas.addEventListener("mousemove", mouseMoveEvent);
+canvas.addEventListener("mouseup", mouseUpEvent);
+</code></pre>
+<p>Each of these functions is adding a different type of listener to the <code>canvas</code>. Each function takes in two parameters (those are the things within the parentheses separated by commas). The first parameter is in quotes, because it is a string value, and tells the function what type of listener to add to our <code>canvas</code> object. The second parameter is a function that we want to be called (or executed) whenever that event fires. We will create these functions next.</p>
+<p>Right now our <code>index.html</code> file should look the same as in <b> Step 1</b>, and our <code>main.js</code> should look as follows:</p>
+<pre><code>var canvas = document.getElementById("paper"),
+ctx = canvas.getContext("2d"),
+width = canvas.width = window.innerWidth,
+height = canvas.height = window.innerHeight;
+
+canvas.addEventListener("mousedown", mouseDownEvent);
+canvas.addEventListener("mousemove", mouseMoveEvent);
+canvas.addEventListener("mouseup", mouseUpEvent);
+</code></pre>
+<h3 id="step-4">Step 4</h3>
+<p>Now let's create those functions, known as <b>Event Handlers</b>. </p>
+<p>Add the following to your <code>main.js</code> file:</p>
+<pre><code>function mouseDownEvent(event) {
+    drawAt(event.clientX, event.clientY);
+    drawing = true;
+}
+
+function mouseMoveEvent(event) {
+    if(drawing) {
+        drawAt(event.clientX, event.clientY);
+    }
+}
+
+function mouseUpEvent() {
+    drawing = false;
+}
+</code></pre>
+<p>The first function, <code>mouseDownEvent(event)</code> is taking in the <code>event</code> object as a parameter, and using its <code>clientX</code> and <code>clientY</code> properties in the <code>drawAt</code> function, which we will create in a moment. It also sets the variable <code>drawing</code> to true, something else that will be added in a moment.</p>
+<p>The second function, <code>mouseMoveEvent(event)</code> is again taking in the <code>event</code> parameter that is passed in by the event listener to check if we are drawing (a.k.a. if the mouse is being pressed), and if so then use the <code>drawAt</code> function to draw at the <code>clientX</code> and <code>clientY</code> location.</p>
+<p>The third function, <code>mouseUpEvent()</code> is going to simply set <code>drawing</code> to false, so that way we aren't adding anything onto our <code>canvas</code> when the mouse isn't being pressed.</p>
+<h3 id="step-5">Step 5</h3>
+<p>Create the <code>drawAt</code> function and a few other variables.</p>
+<p>In our <code>main.js</code> file lets add the <code>drawing</code> variable.</p>
+<p>At the top of our file, below our variables initializations, create a new variable:</p>
+<pre><code>var drawing = false;
+</code></pre>
+<p>This is going to help us check if we have the mouse pressed or not, and thus whether we should be drawing.</p>
+<p>Add these other variables too:</p>
+<pre><code>var color = "black";
+var size = 10;
+var type = "square";
+</code></pre>
+<p>Now we are going to make use of these new variables in our <code>drawAt</code> function.</p>
+<p>Let's create that now, adding it below those variables we just made:</p>
+<pre><code>function drawAt(x, y) {
+    ctx.fillStyle = color;
+    if(type.toLowerCase().trim() == "square") {
+        var kx = x - size / 2,
+            ky = y - size / 2;
+        ctx.fillRect(kx, ky, size, size);
+    } else if(type.toLowerCase().trim() == "circle") {
+        ctx.beginPath();
+        ctx.arc(x, y, size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.closePath();
+    }
+}
+</code></pre>
+<p>Wow! Okay thats a hefty function, so let's dissect it a bit. </p>
+<p>After declaring the function (saying function and then the function name, <code>drawAt</code>) with our <code>x</code> and <code>y</code> parameters, the first thing to notice is we assign <code>ctx.fillStyle</code> to our <code>color</code> variable. This assures that whenever we draw it will always be in whatever value is stored in the <code>color</code> variable. </p>
+<p>The next thing is component is an if, else if block that checks if our <code>type</code> is a square or a circle. It converts our <code>type</code> function to <code>toLowerCase</code> and then uses <code>trim</code> to get rid of excess white space. This ensures that the values are not case-sensitive.</p>
+<p>If we move into our <code>square</code> part of the if, else if block, we will see some code that initializes two variables: <code>kx</code> and <code>ky</code>. These are simply computing the coordinates of the midpoint of the square we want to draw by subtracting half of the <code>size</code> variable from each value. Then, using the <code>fillRect</code> function on our <code>ctx</code> variable, we can draw a rectangle at that location at the specified (x, y, width, height). Our <code>size</code> variable takes care of the <code>width</code> and <code>height</code> of our square, while our newly calculated midpoint coordinates take the place of <code>x</code> and <code>y</code>.</p>
+<p>Moving into our <code>circle</code> part of the if, else if block we will see code for creating a circle in canvas. The first step is using <code>beginPath</code> then using <code>arc(x, y, radius, startAngle, endAngle)</code> to draw a circle. Here we use the raw <code>x</code> and <code>y</code> with our <code>size</code> variable as the radius, and then <code>0</code> as our startAngle and <code>Math.PI * 2</code> as the endAngle in order to get a full circle. After this, we <code>fill</code> it and then <code>closePath</code>.</p>
+<p>Great job! Our drawing app is nearly completed. Your <code>main.js</code> file should look like the following: </p>
+<pre><code>var canvas = document.getElementById("paper"),
+ctx = canvas.getContext("2d"),
+width = canvas.width = window.innerWidth,
+height = canvas.height = window.innerHeight;
+
+var drawing = false;
+var color = "black";
+var size = 10;
+var type = "square";
+
+function drawAt(x, y) {
+    ctx.fillStyle = color;
+    if(type.toLowerCase().trim() == "square") {
+        var kx = x - size / 2,
+            ky = y - size / 2;
+        ctx.fillRect(kx, ky, size, size);
+    } else if(type.toLowerCase().trim() == "circle") {
+        ctx.beginPath();
+        ctx.arc(x, y, size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.closePath();
+    }
+}
+
+canvas.addEventListener("mousedown", mouseDownEvent);
+canvas.addEventListener("mousemove", mouseMoveEvent);
+canvas.addEventListener("mouseup", mouseUpEvent);
+
+function mouseDownEvent(event) {
+    drawAt(event.clientX, event.clientY);
+    drawing = true;
+}
+
+function mouseMoveEvent(event) {
+    if(drawing) {
+        drawAt(event.clientX, event.clientY);
+    }
+}
+
+function mouseUpEvent() {
+    drawing = false;
+}
+</code></pre>
+<p>At this point, you can start drawing on your browser by opening up the <code>index.html</code> file in Google Chrome for example. However, there are a few more things we need to add in order to customize our drawing tool while we draw and save our drawings.</p>
+<h3 id="step-6">Step 6</h3>
+<p>Now we will add another listener, in order to receive keyboard input and change the values of our variables real-time.</p>
+<p>Add the following event listener with the others you have already created in your <code>main.js</code>.</p>
+<pre><code>document.body.addEventListener("keydown", keyDownEvent);
+</code></pre>
+<p>Notice that we are using <code>document.body</code> and not <code>canvas</code> this time.</p>
+<p>Now, let's create this event handler:</p>
+<pre><code>function keyDownEvent(event) {
+    switch(event.keyCode) {
+        case 67: // c
+            color = prompt("What color do you want to draw with?");
+            break;
+        case 83: // s 
+            size = parseInt(prompt("What size do you want to draw with?"));
+            break;
+        case 84: // t 
+            type = prompt("What type of tip do you want to draw with? (square or circle)");
+            break;
+    }
+}
+</code></pre>
+<p>The <code>keyDownEvent(event)</code> function is going to use a <code>switch</code> statement to check the value of <code>event.keyCode</code> in order to see if any of the keys we care about were pressed. The <code>switch</code> statement is going to go through case by case, entering the case block if the value in <code>switch(value)</code> is equal to the value of the case. Once it reaches the end of the statement or a <code>break</code> it jumps out of the function. </p>
+<p>We are checking if the keys <code>c</code>, <code>s</code>, and <code>t</code>, are pressed. When <code>c</code> is pressed we prompt the user for a new color. When <code>s</code> is pressed we prompt the user for a new size, and then use the <code>parseInt</code> function to retrieve an integer value from the string that is returned by <code>prompt</code>. Then if <code>t</code> is pressed we prompt the user for a new type. For all of these prompts we assign the return values to their respective variables.
+if we add in this function by our other event handlers and run the code, we should be able to change the color, size, and type of drawing tool we use by pressing the <code>c</code>, <code>s</code>, and <code>t</code>, keys, respectively.</p>
+<p>Home stretch! We have one final step to top off this lesson.</p>
+<h3 id="step-7">Step 7</h3>
+<p>Now we will be creating the functionality to save our beautiful drawings.</p>
+<p>In our <code>keyDownEvent</code> function, go into the <code>switch</code> statement and after the last <code>break</code> add another <code>case</code> like so:</p>
+<pre><code>case 32: // space bar
+    var imageData = canvas.toDataURL(),
+        name = "Image" + Date.now();
+    var download = document.createElement("a");
+        download.setAttribute("href", imageData);
+        download.setAttribute("download", name);
+        download.innerHTML = name;
+
+    var br = document.createElement("br");
+
+    document.body.appendChild(br);
+    document.body.appendChild(download);
+    break;
+</code></pre>
+<p>This <code>case</code> will trigger when the spacebar is pressed, creating an <code>&lt;a&gt;&lt;/a&gt;</code> tag with Javascript using the <code>document.createElement(name)</code> method, then setting it's <code>href</code> attribute to the <code>imageData</code> which we retrieve with the <code>canvas.toDataURL</code> function. This, in conjunction with the <code>download</code> attribute, will allow us to download the current image on our canvas. Next we set the <code>innerHTML</code> so that a name displays, this name being a concatenation of "Image" and the current time in milliseconds using <code>Date.now()</code>. Next, we create a <code>&lt;br/&gt;</code> element to space out our download links as they are created, then append these to our <code>document.body</code>, remembering to add the <code>break</code> at the end. </p>
+<p><strong>Great job!</strong></p>
+<p>You have succesfully created a drawing app where you can customize your brush and download your masterpieces. Be sure to share this with all of your friends!</p>
+<p>The final status of <code>main.js</code> is shown below:</p>
+<pre><code>var canvas = document.getElementById("paper"),
+ctx = canvas.getContext("2d"),
+width = canvas.width = window.innerWidth,
+height = canvas.height = window.innerHeight;
+
+var drawing = false;
+var color = "black";
+var size = 10;
+var type = "square";
+
+function drawAt(x, y) {
+    ctx.fillStyle = color;
+    if(type.toLowerCase().trim() == "square") {
+        var kx = x - size / 2,
+            ky = y - size / 2;
+        ctx.fillRect(kx, ky, size, size);
+    } else if(type.toLowerCase().trim() == "circle") {
+        ctx.beginPath();
+        ctx.arc(x, y, size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.closePath();
+    }
+}
+
+canvas.addEventListener("mousedown", mouseDownEvent);
+canvas.addEventListener("mousemove", mouseMoveEvent);
+canvas.addEventListener("mouseup", mouseUpEvent);
+document.body.addEventListener("keydown", keyDownEvent);
+
+function mouseDownEvent(event) {
+    drawAt(event.clientX, event.clientY);
+    drawing = true;
+}
+
+function mouseMoveEvent(event) {
+    if(drawing) {
+        drawAt(event.clientX, event.clientY);
+    }
+}
+
+function mouseUpEvent() {
+    drawing = false;
+}
+
+function keyDownEvent(event) {
+    switch(event.keyCode) {
+        case 67: // c
+            color = prompt("What color do you want to draw with?");
+            break;
+        case 83: // s 
+            size = parseInt(prompt("What size do you want to draw with?"));
+            break;
+        case 84: // t 
+            type = prompt("What type of tip do you want to draw with? (square or circle)");
+            break;
+        case 32: // space bar
+            var imageData = canvas.toDataURL(),
+            name = "Image" + Date.now();
+            var download = document.createElement("a");
+                download.setAttribute("href", imageData);
+                download.setAttribute("download", name);
+                download.innerHTML = name;
+
+            var br = document.createElement("br");
+
+            document.body.appendChild(br);
+            document.body.appendChild(download);
+            break;
+    }
+}
+</code></pre>
+              
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            © San Diego Code
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-30ac6a1727.js"></script>
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

@@ -3,8 +3,16 @@
 
     
     <url>
-     <loc>https://sdcoding.com/java/</loc>
-     <lastmod>2017-03-08</lastmod>
+     <loc>https://sdcoding.com/javascript/</loc>
+     <lastmod>2017-07-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>https://sdcoding.com/javascript/HTML5DrawingApp/</loc>
+     <lastmod>2017-07-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
