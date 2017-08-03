@@ -26,7 +26,7 @@ Create your `index.html` file and add the following:
 		</head>
 		<body>
 			<canvas id="paper"></canvas>
-			<script src="main.js"></canvas>
+			<script src="main.js"></script>
 		</body>
 	</html>
 
