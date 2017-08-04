@@ -11,6 +11,14 @@
 
     
     <url>
+     <loc>https://sdcoding.com/javascript/BeginnerJavascript/</loc>
+     <lastmod>2017-08-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
      <loc>https://sdcoding.com/javascript/HTML5DrawingApp/</loc>
      <lastmod>2017-08-04</lastmod>
      <changefreq>daily</changefreq>
@@ -19,7 +27,7 @@
 
     
     <url>
-     <loc>https://sdcoding.com/javascript/BeginnerJavascript/</loc>
+     <loc>https://sdcoding.com/javascript/HTML5CanvasGame/</loc>
      <lastmod>2017-08-04</lastmod>
      <changefreq>daily</changefreq>
     </url>

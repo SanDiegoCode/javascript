@@ -1,0 +1,914 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn Javascript Online">
+      
+      
+        <link rel="canonical" href="https://sdcoding.com/javascript/HTML5CanvasGame/">
+      
+      
+        <meta name="author" content="San Diego Code">
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.2.0">
+    
+    
+      
+        <title>Pong Game Project - Javascript</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-e17eeafcbc.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-892b79c5c5.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="red" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href=".." title="Javascript" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Pong Game Project
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/sandiegocode/javascript/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Javascript
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/sandiegocode/javascript/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../BeginnerJavascript/" title="Introduction to JS" class="md-nav__link">
+      Introduction to JS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../HTML5DrawingApp/" title="Drawing App Project" class="md-nav__link">
+      Drawing App Project
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Pong Game Project
+      </label>
+    
+    <a href="./" title="Pong Game Project" class="md-nav__link md-nav__link--active">
+      Pong Game Project
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-setup" title="Project Setup" class="md-nav__link">
+    Project Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-setting-the-stage" title="Part 1: Setting the Stage" class="md-nav__link">
+    Part 1: Setting the Stage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-a-paddle-for-the-battle" title="Part 2: A Paddle for the Battle" class="md-nav__link">
+    Part 2: A Paddle for the Battle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-mouse-becomes-one-with-paddle" title="Part 3: Mouse Becomes One With Paddle" class="md-nav__link">
+    Part 3: Mouse Becomes One With Paddle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-lets-get-the-ball-rolling" title="Part 4: Let's Get the Ball Rolling" class="md-nav__link">
+    Part 4: Let's Get the Ball Rolling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-pong-i-think-we-need-to-set-some-boundaries" title="Part 5: Pong, I Think We Need to Set Some Boundaries" class="md-nav__link">
+    Part 5: Pong, I Think We Need to Set Some Boundaries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#there-is-no-fairness-in-love-and-war-only-in-keeping-score" title="There is No Fairness in Love and War, Only in Keeping Score" class="md-nav__link">
+    There is No Fairness in Love and War, Only in Keeping Score
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#great-job" title="Great Job!" class="md-nav__link">
+    Great Job!
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-setup" title="Project Setup" class="md-nav__link">
+    Project Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-setting-the-stage" title="Part 1: Setting the Stage" class="md-nav__link">
+    Part 1: Setting the Stage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-a-paddle-for-the-battle" title="Part 2: A Paddle for the Battle" class="md-nav__link">
+    Part 2: A Paddle for the Battle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-mouse-becomes-one-with-paddle" title="Part 3: Mouse Becomes One With Paddle" class="md-nav__link">
+    Part 3: Mouse Becomes One With Paddle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-lets-get-the-ball-rolling" title="Part 4: Let's Get the Ball Rolling" class="md-nav__link">
+    Part 4: Let's Get the Ball Rolling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-pong-i-think-we-need-to-set-some-boundaries" title="Part 5: Pong, I Think We Need to Set Some Boundaries" class="md-nav__link">
+    Part 5: Pong, I Think We Need to Set Some Boundaries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#there-is-no-fairness-in-love-and-war-only-in-keeping-score" title="There is No Fairness in Love and War, Only in Keeping Score" class="md-nav__link">
+    There is No Fairness in Love and War, Only in Keeping Score
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#great-job" title="Great Job!" class="md-nav__link">
+    Great Job!
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+                 <a href="https://github.com/sandiegocode/javascript/edit/master/docs/HTML5CanvasGame.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+               
+              
+                
+                <h1 id="creating-pong-with-html5-canvas-by-gunner-spencer">Creating Pong with HTML5 Canvas by Gunner Spencer</h1>
+<p>Hola! In this course we will take a look at creating games with HTML5 canvas and Javascript. We go over the basics of rendering a view, updating the game state, and receiving user input. It applies most of the skills covered in the <b>Beginner's Guide to Javascript</b>, so if I recommend you check that out if you don't have much experience with Javascript. Let's get started!</p>
+<h4 id="project-setup">Project Setup</h4>
+<p>You will need a text editor (I recommend Atom.io or Textwrangler), but even Notepad will do. Setup a folder that will contain all of the files for this project, and name it something like JavascriptGuide (or don't, name it dankmemes if you want). And thats it! Open up your text editor and if you are using a more advanced text editor you can open up the path for your project folder and advance to the next step (don't worry if you can't, you will probably just need to leave the folder open in your system's file tree, i.e. Finder for Mac, so you can quickly access files inside of it.)</p>
+<h3 id="part-1-setting-the-stage">Part 1: Setting the Stage</h3>
+<p>There is going to be very minimal HTML in this project, so let's just get that out of the way first:</p>
+<p>index.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Lights, Camera, PONG!&lt;/title&gt;
+        &lt;style&gt;
+            html, body {
+                margin: 0px;
+                padding: 0px;
+                overflow: hidden;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script src="main.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>This is just setting up a simple HTML page. The only items of interest are the <code>style</code> tag, which is using a bit of CSS to make sure our screen doesn't have any unneeded white space, and the <code>script</code> tag which is just linking in our <code>main.js</code> file which we will create next:</p>
+<p>main.js</p>
+<pre><code>var canvas = document.createElement("canvas"),
+    width = canvas.width = window.innerWidth,
+    height = canvas.height = window.innerHeight;
+
+document.body.appendChild(canvas);
+
+var ctx = canvas.getContext("2d");
+
+ctx.fillRect(0, 0, width, height);
+</code></pre>
+<p>The first line of code should be familiar (if not, checkout Part 5 of the Beginner's Guide to Javascript). This just creates our DOM element of type <code>canvas</code>. Then we are creating two variables, <code>width</code> and <code>height</code>. We are setting those variables to the <code>canvas.width</code> and <code>canvas.height</code> respectively, which are in turn being assigned the value of <code>window.innerWidth</code> and <code>window.innerHeight</code> respectively. This ensures that our <code>canvas</code> takes up the entire size of our browser screen, and then we store those values in easier-to-use variables like <code>width</code> and <code>height</code>. If you wanted your game screen to be half the width and half the height of the screen, you would simply divide <code>window.innerWidth</code> or <code>window.innerHeight</code> divided by two in the assignment operation.</p>
+<p>The next thing we do is put our canvas onto the body of our HTML page. Again, should be familiar code. Then we go into the most important variable for using HTML5 canvas, the <code>context</code> variable, or in this case we call it <code>ctx</code>. This is what we use to render onto our canvas. So, by storing the value of <code>canvas.getContext("2d")</code> into a variable, we can draw onto the canvas in two dimensions. </p>
+<p>That's where the next line comes in: <code>ctx.fillRect(x, y, width, height)</code>. This takes in four parameters and draws a rectangle at that location, with that width and height, in the current <code>ctx.fillStyle</code>, which by default is black. So by saving this and refreshing our index.html page in the browser, we should have a black screen. Perfect! </p>
+<h3 id="part-2-a-paddle-for-the-battle">Part 2: A Paddle for the Battle</h3>
+<p>We are going to take a look at objects in Javascript, which essentially act as encapsulations for variables and functions that are associated with a certain aspect of our program. This is going to be a simplified version of Javascript objects, so if you want a more in-depth look check out the <b> OOPs, I Instantiated Again </b> lesson on SDCoding.</p>
+<p>Let's get started:</p>
+<pre><code>var paddle = {
+    _x: 0,
+    _y: 0,
+    _width: 0,
+    _height: 0,
+
+    create: function(x, y, width, height) {
+        var p = Object.create(this);
+            p._x = x;
+            p._y = y;
+            p._width = width;
+            p._height = height;
+        return p;
+    },
+
+    render: function(c) {
+        c.fillRect(this._x, this._y, this._width, this._height);
+    },
+
+    setX: function(x) {
+        this._x = x
+    },
+
+    setY: function(y) {
+        this._y = y;
+    },
+
+    getX: function() {
+        return this._x;
+    },
+
+    getY: function() {
+        return this._y;
+    },
+
+    getWidth: function() {
+        return this._width;
+    },
+
+    getHeight: function() {
+        return this._height;
+    }
+};
+</code></pre>
+<p>This is our paddle object. We gave it some simple properties, like <code>_x</code> and <code>_height</code>, which by convention have the underscore before them. This isn't necessary though. Next we have our <code>create</code> function that takes in four parameters to use as properties. Here we are using the <code>Object.create</code> method of instantiating new objects in Javascript. After setting all of the properties, we return our new object. The four encapsulation functions, i.e., <code>getX</code>, <code>getY</code>, <code>setX</code>, <code>setY</code>, are there to facilitate the manipulation of our object's properties. The <code>render</code> function is simply there to draw a rectangle with the object's properties, with the parameter being of type <code>context</code> so that we can draw to it. Let's create our two paddles now:</p>
+<pre><code>var playerPaddle = paddle.create(0, 0, 10, 100);
+var enemyPaddle = paddle.create(width - 10, 0, 10, 100);
+</code></pre>
+<p>Then let's create our <code>update</code> function to start rendering onto the screen. </p>
+<pre><code>function update() {
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, width, height);
+
+    playerPaddle.render(ctx);
+    enemyPaddle.render(ctx);
+    requestAnimationFrame(update);
+}
+</code></pre>
+<p>And then make sure we call the <code>update</code> function. Our complete <code>main.js</code> file should look as follows:</p>
+<pre><code>var canvas = document.createElement("canvas"),
+    width = canvas.width = window.innerWidth,
+    height = canvas.height = window.innerHeight;
+
+document.body.appendChild(canvas);
+
+var ctx = canvas.getContext("2d");
+
+ctx.fillRect(0, 0, width, height);
+
+    var paddle = {
+    _x: 0,
+    _y: 0,
+    _width: 0,
+    _height: 0,
+
+    create: function(x, y, width, height) {
+        var p = Object.create(this);
+            p._x = x;
+            p._y = y;
+            p._width = width;
+            p._height = height;
+        return p;
+    },
+
+    render: function(c) {
+        c.fillRect(this._x, this._y, this._width, this._height);
+    },
+
+    setX: function(x) {
+        this._x = x
+    },
+
+    setY: function(y) {
+        this._y = y;
+    },
+
+    getX: function() {
+        return this._x;
+    },
+
+    getY: function() {
+        return this._y;
+    },
+
+    getWidth: function() {
+        return this._width;
+    },
+
+    getHeight: function() {
+        return this._height;
+    }
+};
+
+var playerPaddle = paddle.create(0, 0, 10, 100);
+var enemyPaddle = paddle.create(width - 10, 0, 10, 100);
+
+update();
+
+function update() {
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, width, height);
+
+    ctx.fillStyle = "white"; // change fill style to distinguish between the paddles and the background
+    playerPaddle.render(ctx);
+    enemyPaddle.render(ctx);
+    requestAnimationFrame(update);
+}
+</code></pre>
+<h3 id="part-3-mouse-becomes-one-with-paddle">Part 3: Mouse Becomes One With Paddle</h3>
+<p>We are going to dive into user input now, so that we can adjust the position of our paddle, and then also implement some very rudementary AI to get the enemy paddle moving. Let's start by adding our event listener:</p>
+<pre><code>document.body.addEventListener("mousemove", mouseMoveHandler);
+
+function mouseMoveHandler(event) {
+    playerPaddle.setY(event.clientY - playerPaddle.getHeight() / 2);
+}
+</code></pre>
+<p>This will readjust our paddle to wherever our mouse is, centering the paddle on our mouse.</p>
+<p>Now let's add the basic AI for our <code>enemyPaddle</code>:</p>
+<p>In our <code>update</code> function, before we render the paddles, let's add a few conditional statements:</p>
+<pre><code>var enemyPos = enemyPaddle.getY();
+
+// if the paddle is at the top of the screen, start moving down
+if(enemyPos &lt; 0) {
+    enemyVelocity *= -1;
+}
+
+// if the paddle is at the bottom of the screen, start moving up
+if(enemyPos + enemyPaddle.getHeight() &gt; height) {
+    enemyVelocity *= -1;
+}
+
+    // update the position of the enemy paddle
+enemyPaddle.setY(enemyPos + enemyVelocity);
+</code></pre>
+<p>These will make sure the <code>enemyPaddle</code> will stay on screen, and will move between the two boundaries. We need to create the <code>enemyVelocity</code> variable though. Near the top of our <code>main.js</code> file let's add this variable:</p>
+<pre><code>var enemyVelocity = 5;
+</code></pre>
+<p>We can adjust the value of this to make it go faster or slower (the bigger we make it, the faster it goes).</p>
+<h3 id="part-4-lets-get-the-ball-rolling">Part 4: Let's Get the Ball Rolling</h3>
+<p>Now it's time to create the <code>ball</code> object. This one will be relatively simple, since we don't need to make multiple copies of it:</p>
+<pre><code>var ball = {
+    _x: width / 2, // center the ball 
+    _y: height / 2, // center the ball
+    _vx: -4,
+    _vy: 4,
+    _size: 6,
+
+    update: function() {
+        this._x += this._vx;
+        this._y += this._vy;
+    },
+
+    render: function(c) {
+        c.beginPath();
+        c.arc(this._x, this._y, this._size, 0, Math.PI * 2);
+        c.fill();
+        c.closePath();
+    }
+};
+</code></pre>
+<p>The <code>update</code> function is here to make changing the position of our ball a little simpler, but it is not necessary. The <code>render</code> function is utilizing the <code>context.arc(x, y, radius, startAngle, endAngle)</code> function to draw a circle, and then fill it. Our <code>_vx</code> and <code>_vy</code> properties stand for the velocity of their respective dimensions. This controls how fast the ball is going and where it is going. If we add the following to our <code>update</code> function:</p>
+<pre><code>ball.update();
+</code></pre>
+<p>and then render it </p>
+<pre><code>ball.render(ctx);
+</code></pre>
+<p>we should see a white ball moving from the center to the bottom left of our screen.</p>
+<h3 id="part-5-pong-i-think-we-need-to-set-some-boundaries">Part 5: Pong, I Think We Need to Set Some Boundaries</h3>
+<p>We are almost there! Now the next step is to make the ball change directions when we hit it with our paddle, and also check if we or the enemy has missed it. This will all take place in the <code>update</code> function.</p>
+<pre><code>if(ball._y - ball._size &lt; 0 || ball._y + ball._size &gt; height) {
+    ball._vy *= -1;
+}
+
+if(ball._x - ball._size &lt; 0) {
+    if(ball._y &gt;= playerPaddle.getY() &amp;&amp; ball._y &lt;= playerPaddle.getY() + playerPaddle.getHeight()) {
+        ball._vx *= -1;
+    } else {
+        enemyScore++;
+        reset();
+    }
+}
+
+if(ball._x + ball._size &gt; width) {
+    if(ball._y &gt;= enemyPaddle.getY() &amp;&amp; ball._y &lt;= enemyrPaddle.getY() + enemyPaddle.getHeight()) {
+        ball._vx *= -1;
+    } else {
+        playerScore++;
+        reset();
+    }
+}
+</code></pre>
+<p>These conditional statement are what's called edge handling, and just check everytime the screen re-renders if the ball is going to leave it. If it is, then we change the velocity if its going vertically off the screen, or we check if the paddle hit it if its horizontally moving off the screen.</p>
+<h3 id="there-is-no-fairness-in-love-and-war-only-in-keeping-score">There is No Fairness in Love and War, Only in Keeping Score</h3>
+<p>Almost done! Now let's just add a way for us to see the scores. First, we need to create those variables, <code>playerScore</code> and <code>enemyScore</code>. Near where we created the <code>enemyVelocity</code> variable, let's create these:</p>
+<pre><code>var enemyScore = 0,
+    playerScore = 0;
+</code></pre>
+<p>Then, in our <code>update</code> function, lets add some code to render these scores:</p>
+<pre><code>ctx.fillText(playerScore, width / 4, height / 10);
+ctx.fillText(enemyScore, width / 4 * 3, height / 10);
+</code></pre>
+<p>Now, let's create that <code>reset</code> function so that our <code>ball</code> will go back to the middle of the screen after a point has been scored.</p>
+<pre><code>function reset() {
+    ball._x = width / 2;
+    ball._y = height / 2;
+    ball._vx *= -1;
+}
+</code></pre>
+<h4 id="great-job">Great Job!</h4>
+<p>You have succesfully created your very own HTML5 Canvas game. If you want to improve on this game, here are some of my suggestions: Make the AI better (like it tries to follow the ball's movements), adjust the velocity of the ball every time it resets (so that it hits at different angles), and then also try to make the game always work in proportion to whatever screen it is being played on.</p>
+<p>The final <code>main.js</code> file should look as follows:</p>
+<pre><code>var canvas = document.createElement("canvas"),
+    width = canvas.width = window.innerWidth,
+    height = canvas.height = window.innerHeight;
+
+var enemyVelocity = 5;
+var enemyScore = 0,
+    playerScore = 0;
+
+document.body.appendChild(canvas);
+
+var ctx = canvas.getContext("2d");
+
+ctx.fillRect(0, 0, width, height);
+
+    var paddle = {
+    _x: 0,
+    _y: 0,
+    _width: 0,
+    _height: 0,
+    create: function(x, y, width, height) {
+        var p = Object.create(this);
+            p._x = x;
+            p._y = y;
+            p._width = width;
+            p._height = height;
+        return p;
+    },
+
+    render: function(c) {
+        c.fillRect(this._x, this._y, this._width, this._height);
+    },
+
+    setX: function(x) {
+        this._x = x
+    },
+
+    setY: function(y) {
+        this._y = y;
+    },
+
+    getX: function() {
+        return this._x;
+    },
+
+    getY: function() {
+        return this._y;
+    },
+
+        getWidth: function() {
+        return this._width;
+    },
+
+    getHeight: function() {
+        return this._height;
+    }
+};
+
+var ball = {
+    _x: width / 2, // center the ball 
+    _y: height / 2, // center the ball
+    _vx: -4,
+    _vy: 4,
+    _size: 6,
+
+    update: function() {
+        this._x += this._vx;
+        this._y += this._vy;
+    },
+
+    render: function(c) {
+        c.beginPath();
+        c.arc(this._x, this._y, this._size, 0, Math.PI * 2);
+        c.fill();
+        c.closePath();
+    }
+};
+
+var playerPaddle = paddle.create(0, 0, 10, 100);
+var enemyPaddle = paddle.create(width - 10, 0, 10, 100);
+
+document.body.addEventListener("mousemove", mouseMoveHandler);
+
+function mouseMoveHandler(event) {
+    playerPaddle.setY(event.clientY - playerPaddle.getHeight() / 2);
+}
+
+function reset() {
+    ball._x = width / 2;
+    ball._y = height / 2;
+ball._vx *= -1;
+}
+
+update();
+
+function update() {
+
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, width, height);
+
+    if(ball._y - ball._size &lt; 0 || ball._y + ball._size &gt; height) {
+    ball._vy *= -1;
+}
+
+if(ball._x - ball._size &lt; 0) {
+    if(ball._y &gt;= playerPaddle.getY() &amp;&amp; ball._y &lt;= playerPaddle.getY() + playerPaddle.getHeight()) {
+        ball._vx *= -1;
+    } else {
+    enemyScore++;
+  reset();
+    }
+}
+
+if(ball._x + ball._size &gt; width) {
+    if(ball._y &gt;= enemyPaddle.getY() &amp;&amp; ball._y &lt;= enemyPaddle.getY() + enemyPaddle.getHeight()) {
+        ball._vx *= -1;
+    } else {
+playerScore++;
+reset();
+    }
+}
+
+    var enemyPos = enemyPaddle.getY();
+
+
+// if the paddle is at the top of the screen, start moving down
+if(enemyPos &lt; 0) {
+    enemyVelocity *= -1;
+}
+
+// if the paddle is at the bottom of the screen, start moving up
+if(enemyPos + enemyPaddle.getHeight() &gt; height) {
+    enemyVelocity *= -1;
+}
+
+    // update the position of the enemy paddle
+enemyPaddle.setY(enemyPos + enemyVelocity);
+
+ball.update();
+ctx.fillStyle = "white";
+    playerPaddle.render(ctx);
+    enemyPaddle.render(ctx);
+ball.render(ctx);
+
+    ctx.fillText(playerScore, width / 4, height / 10);
+ctx.fillText(enemyScore, width / 4 * 3, height / 10);
+    requestAnimationFrame(update);
+}
+</code></pre>
+<p>Checkout the final result at <a href="https://jsfiddle.net/jshsdgkk/42/">https://jsfiddle.net/jshsdgkk/42/</a>!</p>
+              
+              
+                <h2>Comments</h2>
+                <div id="disqus_thread"></div>
+                <script>
+                  var disqus_config = function () {
+                    this.page.url = "https://sdcoding.com/javascript/HTML5CanvasGame/";
+                    this.page.identifier =
+                      "/HTML5CanvasGame/";
+                  };
+                  (function() {
+                    var d = document, s = d.createElement("script");
+                    s.src = "//sandiegocode.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../HTML5DrawingApp/" title="Drawing App Project" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Drawing App Project
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            © San Diego Code
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-30ac6a1727.js"></script>
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
