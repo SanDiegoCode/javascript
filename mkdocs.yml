@@ -6,8 +6,8 @@ site_url: 'https://sdcoding.com/javascript'
 
 pages:
 - Home: index.md
-- Drawing App Project: HTML5DrawingApp.md
 - Introduction to JS: BeginnerJavascript.md
+- Drawing App Project: HTML5DrawingApp.md
 
 # Uncomment the below line to add lessons
 #- Lesson 1: lesson1.md
