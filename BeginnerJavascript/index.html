@@ -1,0 +1,647 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn Javascript Online">
+      
+      
+        <link rel="canonical" href="https://sdcoding.com/javascript/BeginnerJavascript/">
+      
+      
+        <meta name="author" content="San Diego Code">
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.2.0">
+    
+    
+      
+        <title>Introduction to JS - Javascript</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-e17eeafcbc.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-892b79c5c5.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="red" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href=".." title="Javascript" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Introduction to JS
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/sandiegocode/javascript/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Javascript
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/sandiegocode/javascript/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../HTML5DrawingApp/" title="Drawing App Project" class="md-nav__link">
+      Drawing App Project
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Introduction to JS
+      </label>
+    
+    <a href="./" title="Introduction to JS" class="md-nav__link md-nav__link--active">
+      Introduction to JS
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-setup" title="Project Setup" class="md-nav__link">
+    Project Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-two-worlds-collide-html-javascript" title="Part 1: Two Worlds Collide, HTML &amp; Javascript" class="md-nav__link">
+    Part 1: Two Worlds Collide, HTML &amp; Javascript
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-o-where-art-thou-variables" title="Part 2: O, Where art Thou, Variables" class="md-nav__link">
+    Part 2: O, Where art Thou, Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-its-true-javascript-is-the-language-for-you" title="Part 3: It's True, Javascript is the Language for You" class="md-nav__link">
+    Part 3: It's True, Javascript is the Language for You
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-putting-the-fun-in-functions" title="Part 4: Putting the Fun in Functions" class="md-nav__link">
+    Part 4: Putting the Fun in Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-simple-dom-for-your-dome" title="Part 5: Simple DOM for your Dome" class="md-nav__link">
+    Part 5: Simple DOM for your Dome
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" title="Conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-setup" title="Project Setup" class="md-nav__link">
+    Project Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-two-worlds-collide-html-javascript" title="Part 1: Two Worlds Collide, HTML &amp; Javascript" class="md-nav__link">
+    Part 1: Two Worlds Collide, HTML &amp; Javascript
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-o-where-art-thou-variables" title="Part 2: O, Where art Thou, Variables" class="md-nav__link">
+    Part 2: O, Where art Thou, Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-its-true-javascript-is-the-language-for-you" title="Part 3: It's True, Javascript is the Language for You" class="md-nav__link">
+    Part 3: It's True, Javascript is the Language for You
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-putting-the-fun-in-functions" title="Part 4: Putting the Fun in Functions" class="md-nav__link">
+    Part 4: Putting the Fun in Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-simple-dom-for-your-dome" title="Part 5: Simple DOM for your Dome" class="md-nav__link">
+    Part 5: Simple DOM for your Dome
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" title="Conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+                 <a href="https://github.com/sandiegocode/javascript/edit/master/docs/BeginnerJavascript.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+               
+              
+                
+                <h1 id="a-beginners-guide-to-javascript-by-gunner-spencer">A Beginner's Guide to Javascript by Gunner Spencer</h1>
+<p>Hello there! Welcome to this course that will teach you all of the basics of the Javascript programming language. Javascript allows us to program applications and webpages for the web browser (like Google Chrome or Internet Explorer). Think of it as the brains of the operation, that works on the client side (which means it doesn't talk to the server), in order to provide your webpage with functionality. Let's just jump right in to start getting a better understanding!</p>
+<h4 id="project-setup">Project Setup</h4>
+<p>You will need a text editor (I recommend Atom.io or Textwrangler), but even Notepad will do. Setup a folder that will contain all of the files for this project, and name it something like JavascriptGuide (or don't, name it dankmemes if you want). And thats it! Open up your text editor and if you are using a more advanced text editor you can open up the path for your project folder and advance to the next step (don't worry if you can't, you will probably just need to leave the folder open in your system's file tree, i.e. Finder for Mac, so you can quickly access files inside of it.)</p>
+<h3 id="part-1-two-worlds-collide-html-javascript">Part 1: Two Worlds Collide, HTML &amp; Javascript</h3>
+<p>The first thing we need to do before we even begin writing any Javascript is to create an <code>index.html</code> file. To do this, use your text editor to create a new file, then save that file as <code>index.html</code>.</p>
+<p><b>NOTE: Whenever you make changes to any file, you have to save it before seeing those changes reflected in the browser.</b></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;  
+    &lt;head&gt;
+        &lt;title&gt; Javascript Tutorial &lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script src="main.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>This just creates a basic HTML page that we can open up with the web browser of our choice (find the <code>index.html</code> file and right click it, then press open with and select the web browser). All we are doing on this webpage is giving it a title: <code>Javascript Tutorial</code> and then in our <code>body</code> tags, creating <code>script</code> tags to import our Javascript file by setting <code>src</code>, standing for source, to our <code>main.js</code> file, which we will create next.</p>
+<h3 id="part-2-o-where-art-thou-variables">Part 2: O, Where art Thou, Variables</h3>
+<p>Now it's time for our <code>main.js</code> file! Create it in the same way you created the <code>index.html</code> file, except of course with our new name, <code>main.js</code>. Notice that a Javascript file will always have the extension <code>.js</code>. This lets the browser know what type of file it is.</p>
+<p>Open up your <code>main.js</code> and type the following:</p>
+<pre><code>var MyVariable = "Hello World!";
+
+console.log(MyVariable);
+</code></pre>
+<p>Now save this file and refresh your webpage. Nothing happened! Or so it seems. Right click the browser screen (if you are using Safari, switch to another browser, otherwise this won't work), and press Inspect Element, or Inspect. A box should pop up somewhere on your browser window that has the HTML code we wrote for our <code>index.html</code> file. Go to the top of that box and click where it says <code>Console</code>. Here you will see the output of our function we just called, <code>console.log</code>. </p>
+<p>To call a function is to make that piece of code inside the function run. We pass what are called <code>parameters</code> to functions, the things inside the parentheses of the function call. These are used by the function, like how <code>console.log(text)</code> takes in the parameter <code>text</code> to output to the console.</p>
+<p>The parameter that we passed into the function was actually a variable, specifically, <code>MyVariable</code>, which had a value of <code>"Hello World!"</code>. Variables are found in all programming langauges, as they allow us to store data for later use in our program. There are different types of data, for example: numbers, strings (which are just words or letters, like the value of <code>MyVariable</code>), and booleans. By creating a variable, we can, instead of using the string <code>"Hello World!"</code>, just use the name of the variable, <code>MyVariable</code>, in its place. The same goes for numbers in mathematical operations (which we will see in a moment) or boolean values (true or false) in conditional statements. </p>
+<p>Below are examples of the different variables, including numbers, and the mathematical operations we can do with them.</p>
+<pre><code>var count = 5; // just a number
+var num = 10.5; // a floating point number, or decimal
+var product = count * num; // multiplication operator
+var quotient = num / count; // division operator
+var added = count + num; // addition operator
+var subtracted = num - count; // subtraction operator
+
+product = quotient * added; 
+/* notice that we don't have to add the keyword var 
+after we already created the variable. */
+
+subtracted = product - subtracted; 
+/* we can use the variable we are assigning a value to 
+inside of the right-hand operation */
+
+var crazyOperation = ((count * 5) / (product + added)) * quotient / 1.5; 
+/* this demonstrates the order of operations, which is 
+the same as in your regular math class, but we use 
+parentheses for nested statements that we want to make 
+sure get evaluated first */
+</code></pre>
+<p>Try these out, using <code>console.log</code> to view the values you get. The <code>//</code> is a single line comment, so everything else after the <code>//</code> in that line is ignored. Same thing with the <code>/*   multiline comment   */</code> which can span multiple lines. Just make sure you open up with <code>/*</code> and then write your comment, then close it <code>*/</code>.</p>
+<pre><code>var firstName = "Johnny";
+var lastName = "Appleseed";
+var fullName = firstName + " " + lastName;
+
+var nameSize = fullName.length;
+</code></pre>
+<p>These are examples of how you can use <code>strings</code>, the data type that allows you to store letters/characters in a variable. Note that <code>strings</code> have built-in attributes, like the <code>length</code> attribute that returns the length of that string. Also, we can combine, or concat, <code>string</code> with <code>+</code> signs. That's how we get the value for our <code>fullName</code> variable. Try using <code>console.log</code> to view the values!</p>
+<pre><code>var continue = false;
+// some stuff we do before we continue
+continue = true;
+</code></pre>
+<p>This is a boolean variable. It holds the value of either <code>true</code> or <code>false</code>, which will allow us to evaluate conditional statements, a concept we will jump into next.</p>
+<h3 id="part-3-its-true-javascript-is-the-language-for-you">Part 3: It's True, Javascript is the Language for You</h3>
+<p>This next concept is crucial to programming. It is the conditional statement, which essentially checks if a condition is true or false, then does something accordingly. In Javascript, we have a few of these:</p>
+<pre><code>var count = 5,
+    measure = 20;
+
+if(count &lt; measure) {
+    console.log("count is less than measure");
+    if(count &gt; measure / count) {
+        console.log("we can put if statements inside of if statements, and also use mathematical operations in the condition brackets!");
+    }
+} else {
+    console.log("this code would run if the condition was not true.");
+}
+</code></pre>
+<p>This is the most fundamental conditional statement, the <code>if else</code> statement. It checks if the condition inside the parentheses is true, and if it is it executes the code inside of the curly brackets. Otherwise, it executes the code following the <code>else</code> keyword. There are a few conditional operators we can use to compare values: <code>==, &gt;, &lt;, &gt;=, &lt;=, !=</code>. These are pretty intuitive, meaning is equal to, greater than, less than, greater than or equal to, less than or equal to, and is not equal to, respectively. </p>
+<pre><code>var count = 0;
+while(count &lt; 10) {
+    console.log(count);
+    count++; // same thing as count += 1, count = count + 1
+}
+</code></pre>
+<p>This is a <code>while</code> loop, which executes the code inside the curly braces while the condition in the parentheses is true. Test out this piece of code, even see if you can make it count by two's or three's. </p>
+<pre><code>for(var count = 0; count &lt; 10; count++) {
+    console.log(count);
+}
+</code></pre>
+<p>This is a <code>for</code> loop, which essentially combines the components of a <code>while</code> loop necessary for iteration into one concise statement. This does the exact same thing as the previous conditional loop, except the syntax is different, since the iterator (or variable we increment) is declared inside the <code>for</code> statement, along with the condition to check and the iteration command <code>count++</code>.</p>
+<h3 id="part-4-putting-the-fun-in-functions">Part 4: Putting the Fun in Functions</h3>
+<p>So far we have looked at Javascript code that executes in a linear fashion. This means that the Javascript engine, which runs our code, is starting from the top of our file and executes the code line by line until it reaches the end. Things like conditional statements and loops can skip over certain pieces of code, but for the most part, there is only linear progression. This is great, except for what if we wanted to do the same thing in two places in our code? Would we have to rewrite the same code? No! That's where functions come in. Functions act as blocks that contain code we can execute from anywhere in our program, again and again. We have already seen examples of this, like <code>console.log</code>, which receives a parameter, like the text we want to output, and uses it inside of the code contained in that function. Let's take a look at how a function works in code!</p>
+<pre><code>function addTwoNumbers(num1, num2) {
+    var result = num1 + num2;
+    return result;
+}
+</code></pre>
+<p>This is a super simple function that takes in two parameters, <code>num1</code> and <code>num2</code> and adds them, storing that value in a variable we declare inside of the function called <code>result</code>, then we return that <code>result</code>.
+This is how it could be used in practice:</p>
+<pre><code>console.log("2 + 5 is " + addTwoNumbers(2, 5));
+</code></pre>
+<p>Sure, not super useful, since we could just handwrite that code just as fast as calling the function. However, as your computations or logic gets more complex, you need to organize it into functions, lest you wish to go insane. Here is a good example of this:</p>
+<pre><code>function raiseToPower(num, exponent) {
+    var result = 1;
+    for(var k = 0; k &lt; exponent; k++) {
+        result *= num;
+    }
+    return result;
+}
+</code></pre>
+<p>This function is a bit more complex than just adding two powers, because as you might be able to tell, it raises a <code>num</code> to an <code>exponent</code> and returns that <code>result</code>. This is still a fairly simple example, but you can see how it would be necessary to have a function like this rather than rewriting the tedious code everytime you wanted to use it. </p>
+<h3 id="part-5-simple-dom-for-your-dome">Part 5: Simple DOM for your Dome</h3>
+<p>So far we have only been manipulating variables we have created in our Javascript file, with no real effect on our webpage. DOM, which stands for the Document Object Model, solves this! DOM allows us to interact with our HTML elements so we can change our webpage from Javascript! Let's take a look at a few examples:</p>
+<p>index.html</p>
+<pre><code>    &lt;!DOCTYPE html&gt;
+&lt;html&gt;  
+    &lt;head&gt;
+        &lt;title&gt; Javascript Tutorial &lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- NEW STUFF --&gt;
+            &lt;div id="myDiv"&gt;&lt;/div&gt;
+            &lt;div class="coolClass"&gt;&lt;/div&gt;
+            &lt;div class="coolClass"&gt;&lt;/div&gt;
+        &lt;!-- END OF NEW STUFF --&gt;
+        &lt;script src="main.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>main.js</p>
+<pre><code>var myDivVariable = document.getElementById("myDiv");
+var theCoolClassVariable = document.getElementsByClassName("coolClass");
+
+myDivVariable.innerHTML = "Hello, folks!";
+
+for(var k = 0; k &lt; theCoolClassVariable.length; k++) {
+    theCoolClassVariable[k].innerHTML = "This is a part of the cool class";
+}
+
+document.body.style.backgroundColor = "red";
+document.body.style.color = "white";
+</code></pre>
+<p>A lot to unpack here. The first thing we notice are these two variables we created: <code>myDivVariable</code> and <code>theCoolClassVariable</code>. These each store the value returned by a built-in DOM function. <code>document.getElementById(id)</code> returns the element that matches that id from the HTML file. In this case, we would return the <code>div</code> with an <code>id</code> of <code>myDiv</code>. The next DOM function, <code>document.getElementsByClassName(name)</code> returns an <code>array</code> of all the elements whose class matches that name. Essentially, an array is a data type that can store multiple values, and you can access those values by using square bracets <code>[index]</code> where the <code>index</code> starts at <code>0</code> and goes up to the <code>array.length - 1</code>, whatever that may be. Before we move on, here is a quixk example of arrays:</p>
+<pre><code>var myList = ["hello", "my", "name", "is", "fred"];
+var fullSentence = "";
+for(var k = 0; k &lt; myList.length; k++) {
+    fullSentence += myList[k] + " ";
+}
+console.log(fullSentence);
+
+console.log("The first word is " + myList[0]);
+console.log("The last word is " + myList[4]);
+</code></pre>
+<p>Try running this example and see the output. Arrays can also store numbers, booleans, or objects like our DOM function <code>document.getElementsByClassName</code> returns.</p>
+<p>Now, back to the DOM example.</p>
+<p>The property <code>innerHTML</code> of a DOM object allows us to manipulate whatever is inside of the tags. We could even add in another HTML element with this! </p>
+<pre><code>document.body.innerHTML += "&lt;div id='yolo'&gt;&lt;/div&gt;";
+document.getElementById("yolo").innerHTML = "yolo div";
+</code></pre>
+<p>This is an easy way of manipulating our DOM, but not the best. It gets messy writing HTML is Javascript as a string. Notice that when we added the <code>div</code> with <code>innerHTML</code> and gave it an <code>id</code> we had to use <code>''</code> single quotes instead of <code>""</code> double quotes. This is because using two sets of double quotes would confuse the Javascript engine and give us an error. Theres a better way to create and add DOM objects in Javascript that we will go into in a moment.</p>
+<p>The next thing we need to unpack is the <code>style</code> property of our DOM objects. We were able to manipulate the CSS of our HTML objects using this <code>style</code> property. </p>
+<p>CSS</p>
+<pre><code>div {
+    background-color: red;
+}
+</code></pre>
+<p>Javascript</p>
+<pre><code>myObject.style.backgroundColor = "red";
+</code></pre>
+<p>These two statements, written in different languages, do the same thing, assuming they are both pointing to the same object. Take note of the syntax differences between them, like how in Javascript there aren't any <code>-</code>'s and instead the first letter of the next word is capitalized. This practice is called camelCase.</p>
+<p>Now, onto the cleaner creation of HTML elements in Javascript. We saw how we could do this with <code>innerHTML</code>, but the better, more elegant way is with <code>document.createElement</code>. Here is an example:</p>
+<pre><code>var myDiv = document.createElement("div");
+    myDiv.style.backgroundColor = "red";
+    myDiv.style.width = "100px";
+    myDiv.style.height = "100px";
+
+var text = document.createElement("p");
+    text.innerHTML = "Created with JS";
+
+myDiv.appendChild(text);
+
+document.body.appendChild(myDiv);
+</code></pre>
+<p>This creates two elements with the <code>document.createElement(elementName)</code> function. Then we can apply our DOM properties to those in order to change their style/text. Then, using <code>appendChild</code>, we add first the <code>text</code> element to <code>myDiv</code> and then append <code>myDiv</code> to our <code>document.body</code>. This is the equivalent of the following:</p>
+<p>HTML </p>
+<pre><code>&lt;body&gt;
+    &lt;div style="background-color:red; width: 100px; height: 100px"&gt; 
+        &lt;p&gt;Created With JS&lt;/p&gt; 
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<h3 id="conclusion">Conclusion</h3>
+<p>Congratulations! You have succesfully learned the basics of Javascript. This will provide you with a base to start the rest of your learning. Check out the other projects we have on SDCoding to learn more. Get creative! The hardest part about programming is not remembering the syntax, that comes with practice, it's being able to use logic and creativity to solve problems and create new things.</p>
+              
+              
+                <h2>Comments</h2>
+                <div id="disqus_thread"></div>
+                <script>
+                  var disqus_config = function () {
+                    this.page.url = "https://sdcoding.com/javascript/BeginnerJavascript/";
+                    this.page.identifier =
+                      "/BeginnerJavascript/";
+                  };
+                  (function() {
+                    var d = document, s = d.createElement("script");
+                    s.src = "//sandiegocode.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../HTML5DrawingApp/" title="Drawing App Project" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Drawing App Project
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            © San Diego Code
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-30ac6a1727.js"></script>
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
